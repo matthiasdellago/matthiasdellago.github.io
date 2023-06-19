@@ -69,4 +69,9 @@ nav ul li a:hover {
     nav ul {
       flex-direction: column;
     }
-  }
+
+    /* Add some margin to the list items to increase spacing */
+    nav ul li {
+      margin: 10px 0; /* adjust as needed */
+    }
+}
