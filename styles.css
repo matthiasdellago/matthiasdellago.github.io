@@ -1,8 +1,19 @@
+:root {
+    --background-color: #E3E4DB; /* Alabaster */
+    --title-color: #000000; /* Black */
+    --text-color: #000000; /* Black */
+    --button-color: #FAB95B; /* Amber */
+    --button-text-color: #000000; /* Black */
+    --button-hover-color: #b83314; /* Engineering Orange */
+    --button-hover-text-color: #E3E4DB; /* Alabaster */
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ede4db;
+    background-color: var(--background-color);
 }
 
 .container {
@@ -24,54 +35,65 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: var(--title-color);
 }
 
 p {
-    color: #666;
+    color: var(--text-color);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+nav ul li {
+    flex: 1 1 auto;
+    margin: 0 10px;
+    text-align: center;
 }
 
 nav ul li a {
-    color: #333;
+    color: var(--button-text-color);
     text-decoration: none;
     display: flex;
     align-items: center;
-}
-
-nav ul li a span {
-    margin-right: 5px;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--button-color);
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    width: 100%;
 }
 
 nav ul li a:hover {
-    color: #000;
-    text-decoration: underline;
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-text-color);
+    text-decoration: none;
 }
 
 @media screen and (max-width: 620px) {
     .profile-header {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
   
     .profile {
-      width: 100px;
-      height: 100px;
+        width: 100px;
+        height: 100px;
     }
   
     nav ul {
-      flex-direction: column;
+        flex-direction: column;
+        align-items: stretch; /* stretch to fill the parent */
+        padding: 0 20px;
     }
 
-    /* Add some margin to the list items to increase spacing */
     nav ul li {
-      margin: 10px 0; /* adjust as needed */
+        margin: 9px auto; /* increase vertical spacing, center the buttons */
+        width: 55%; /* decrease the width */
     }
 }
