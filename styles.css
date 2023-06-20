@@ -2,9 +2,9 @@
     --background-color: #E3E4DB; /* Alabaster */
     --title-color: #000000; /* Black */
     --text-color: #000000; /* Black */
-    --button-color: #FAB95B; /* Amber */
+    --button-color: #000000; /* Amber */
     --button-text-color: #000000; /* Black */
-    --button-hover-color: #b83314; /* Engineering Orange */
+    --button-hover-color: #000000; /* Engineering Orange */
     --button-hover-text-color: #E3E4DB; /* Alabaster */
 }
 
@@ -62,9 +62,10 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     padding: 10px 0;
-    background-color: var(--button-color);
-    border-radius: 3px;
-    transition: background-color 0.2s;
+    background-color: transparent;
+    border: 1px solid var(--button-color);
+    border-radius: 2px; /* rounded corners */
+    transition: background-color 0.1s, color 0.1s, transform 0.1s; /* animate color and scaling */
     width: 100%;
 }
 
@@ -72,20 +73,29 @@ nav ul li a:hover {
     background-color: var(--button-hover-color);
     color: var(--button-hover-text-color);
     text-decoration: none;
+    transform: scale(1.05); /* slight increase in size on hover */
 }
+
+
 
 @media screen and (max-width: 620px) {
     .profile-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: -10px;  /* reduce space */
     }
   
     .profile {
-        width: 100px;
-        height: 100px;
+        width: 150px;  /* increase size */
+        height: 150px; /* increase size */
+        margin: 10px auto; /* center image and increase vertical space */
     }
   
+    p {
+        text-align: center; /* center align text */
+    }
+
     nav ul {
         flex-direction: column;
         align-items: stretch; /* stretch to fill the parent */
@@ -93,7 +103,8 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        margin: 9px auto; /* increase vertical spacing, center the buttons */
+        margin: 7px auto; /* increase vertical spacing, center the buttons */
         width: 55%; /* decrease the width */
     }
 }
+
