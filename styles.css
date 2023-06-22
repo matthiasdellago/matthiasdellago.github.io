@@ -1,11 +1,11 @@
 :root {
-    --background-color: #E3E4DB; /* Alabaster */
-    --title-color: #000000; /* Black */
-    --text-color: #000000; /* Black */
-    --button-color: #000000; /* Amber */
-    --button-text-color: #000000; /* Black */
-    --button-hover-color: #000000; /* Engineering Orange */
-    --button-hover-text-color: #E3E4DB; /* Alabaster */
+    --background-color: #f6f1e3;
+    --title-color: #000000;
+    --text-color: #000000;
+    --button-color: #000000;
+    --button-text-color: #000000;
+    --button-hover-color: #000000;
+    --button-hover-text-color: #f6f1e3;
 }
 
 
