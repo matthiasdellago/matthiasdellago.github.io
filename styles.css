@@ -69,14 +69,23 @@ nav ul li a {
     width: 100%;
 }
 
-nav ul li a:hover {
+/* Apply hover effects only for non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    nav ul li a:hover {
+        background-color: var(--button-hover-color);
+        color: var(--button-hover-text-color);
+        text-decoration: none;
+        transform: scale(1.05); /* slight increase in size on hover */
+    }
+}
+
+/* For touch devices use active state instead of hover */
+nav ul li a:active {
     background-color: var(--button-hover-color);
     color: var(--button-hover-text-color);
     text-decoration: none;
-    transform: scale(1.05); /* slight increase in size on hover */
+    transform: scale(1.05); /* slight increase in size on press */
 }
-
-
 
 @media screen and (max-width: 620px) {
     .profile-header {
