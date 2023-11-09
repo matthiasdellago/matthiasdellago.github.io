@@ -104,6 +104,8 @@ nav ul li a:active {
   
     p {
         text-align: center; /* center align text */
+        max-width: 100%; /* prevent text from overflowing */
+        font-size: 20px; /* increase font size */
     }
 
     nav ul {
@@ -113,7 +115,7 @@ nav ul li a:active {
     }
 
     nav ul li {
-        margin: 7px auto; /* increase vertical spacing, center the buttons */
+        margin: 9px auto; /* increase vertical spacing, center the buttons */
         width: 55%; /* decrease the width */
     }
 }
